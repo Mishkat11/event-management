@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Ticket Sales",
+      "short_description": "Online and on-site ticket sales",
+      "price": "$10,000",
+      "image_url": "https://example.com/ticket_sales.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Event Promotion",
+      "short_description": "Marketing and advertising services",
+      "price": "$15,000",
+      "image_url": "https://example.com/event_promotion.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Event Planning and Coordination",
+      "short_description": "Full event planning and logistics",
+      "price": "$20,000",
+      "image_url": "https://example.com/event_planning.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Venue Booking",
+      "short_description": "Venue selection and contract negotiation",
+      "price": "$5,000",
+      "image_url": "https://example.com/venue_booking.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Security Services",
+      "short_description": "Event security personnel",
+      "price": "$12,000",
+      "image_url": "https://example.com/security_services.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Catering and Food Services",
+      "short_description": "Food and beverage catering",
+      "price": "$8,000",
+      "image_url": "https://example.com/catering_services.jpg"
+    }
+  ]
+  
