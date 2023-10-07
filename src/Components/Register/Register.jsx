@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser,handleUpdateProfile } = useContext(AuthContext)
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -17,10 +17,7 @@ const Register = () => {
         const password = e.target.password.value
 
 
-        if (!/.{6,}/.test(password)) {
-            toast.error('Your password must be at least 6 characters long.  ')
-            return
-        }
+     
         if (!/.{6,}/.test(password)) {
             toast.error('Your password must be at least 6 characters long.  ')
             return
@@ -35,8 +32,17 @@ const Register = () => {
         }
 
         createUser(email, password)
-            .then(res => console.log(res.user))
-            .catch(error => console.error(error))
+            .then(res => {
+                handleUpdateProfile(name,img)
+                .then(()=>{
+                    toast.success('User created successfully')
+                console.log(res.user);
+                })
+                .catch(error=>{
+                    toast.error(error.message)
+                })
+            })
+            .catch(error => toast.error(error.message))
 
     }
     return (

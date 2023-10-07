@@ -8,6 +8,7 @@ import About from '../Pages/About/About';
 import SingleService from '../Components/SingleService';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
+import PrivateRoute from './PrivateRoute';
 
 const MainRoute = createBrowserRouter ([
     {
@@ -30,7 +31,7 @@ const MainRoute = createBrowserRouter ([
             },
             {
             path:'/service/:id',
-            element:<SingleService></SingleService>,
+            element:<PrivateRoute><SingleService></SingleService></PrivateRoute>,
             loader:()=>fetch('/concert.json')
             },
             {

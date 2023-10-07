@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate,   } from "react-router-dom";
 import SocialLogin from "../../Shared/SocialLogin";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Login = () => {
     const {signIn} = useContext(AuthContext)
+const location = useLocation()
+const navigate = useNavigate()
+console.log(location);
+    
     const handleLogin =(e)=>{
         e.preventDefault()
         
@@ -13,10 +18,29 @@ const Login = () => {
         const email = e.target.email.value
        
         const password = e.target.password.value
+
+        
+        if (!/.{6,}/.test(password)) {
+            toast.error('Your password must be at least 6 characters long.  ')
+            return
+        }
+        if (!/(?=.*[\W_])/.test(password)) {
+            toast.error('It must include at least one special symbol (e.g., !, @, #, $, etc.).  ')
+            return
+        }
+        if (!/(?=.*[A-Z])/.test(password)) {
+            toast.error('It must contain at least one uppercase letter (A-Z).  ')
+            return
+        }
         
         signIn(email,password)
-        .then(res=>console.log(res.user))
-        .catch(error=>console.error(error))
+        .then(()=>{
+            toast.success('User logged in successfully')
+          navigate(location?.state ? location.state : '/' )
+        })
+        .catch(error=>{
+            toast.error(error.message)
+        })
         
             }
     return (

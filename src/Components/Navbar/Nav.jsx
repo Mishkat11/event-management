@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Nav = () => {
     const navLink = <div className="text-xl space-x-2">
@@ -15,6 +17,8 @@ const Nav = () => {
                 isPending ? "pending" : isActive ? "underline btn btn-sm btn-ghost  text-blue-600 font-semibold " : ""
             }> About</NavLink>
     </div>
+
+    const {user,logout} = useContext(AuthContext)
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -37,7 +41,30 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                  <Link to={'/login'}>  <button className="btn btn-sm hover:bg-blue-400 hover:text-white">Login</button></Link>
+                {
+                        user?.email ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li>
+                                    <button className="btn btn-sm  btn-ghost">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button 
+                                    onClick={logout} className="btn btn-sm  btn-ghost">Logout</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to='/login'>
+                                <button className="btn btn-sm  btn-ghost">Login</button>
+                            </Link>
+                    }
                 </div>
             </div>
         </div>
