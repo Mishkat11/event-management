@@ -6,6 +6,8 @@ import Error from '../Error/Error';
 import Contact from '../Pages/Contact/Contact';
 import About from '../Pages/About/About';
 import SingleService from '../Components/SingleService';
+import Login from '../Components/Login/Login';
+import Register from '../Components/Register/Register';
 
 const MainRoute = createBrowserRouter ([
     {
@@ -30,6 +32,14 @@ const MainRoute = createBrowserRouter ([
             path:'/service/:id',
             element:<SingleService></SingleService>,
             loader:()=>fetch('/concert.json')
+            },
+            {
+                path:'/login',
+                element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }

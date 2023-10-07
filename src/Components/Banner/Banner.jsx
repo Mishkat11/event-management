@@ -9,7 +9,6 @@ const Banner = () => {
                <div data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine"
-    // data-aos-duration ="1200"
     className="relative bg-black/60 h-full "
       >
                    <div className="h-1/2 mx-auto flex-row pt-36 text-white items-center px-10">

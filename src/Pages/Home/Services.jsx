@@ -23,7 +23,7 @@ const Services = ({ services }) => {
                     <h4 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                       {short_description}
                     </h4>
-                    <p>Price: {price}</p>
+                    <p className='font-bold'>Price: {price}</p>
                     <a className="inline-block" href="#">
                       <Link to={`/service/${id}`}>
                       <button

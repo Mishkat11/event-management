@@ -1,19 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = () => {
     const navLink = <div className="text-xl space-x-2">
         <NavLink to="/"
             className={({ isActive, isPending }) =>
                 isPending ? "" : isActive ? "  underline btn btn-sm btn-ghost  text-blue-600 font-semibold" : ""
-            }>HOME </NavLink>
+            }>Home </NavLink>
         <NavLink to="/contact"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? " underline btn btn-sm btn-ghost  text-blue-600 font-semibold" : ""
-            }> CONTACT </NavLink>
+            }> Contact </NavLink>
         <NavLink to="/about"
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "underline btn btn-sm btn-ghost  text-blue-600 font-semibold " : ""
-            }> ABOUT</NavLink>
+            }> About</NavLink>
     </div>
     return (
         <div>
@@ -37,7 +37,7 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <button className="btn btn-sm hover:bg-blue-400 hover:text-white">Login</button>
+                  <Link to={'/login'}>  <button className="btn btn-sm hover:bg-blue-400 hover:text-white">Login</button></Link>
                 </div>
             </div>
         </div>

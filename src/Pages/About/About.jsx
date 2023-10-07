@@ -1,8 +1,9 @@
 import Footer from "../../Components/Footer/Footer";
 import { AiTwotoneLock } from 'react-icons/ai'
-import { FaTruck } from 'react-icons/fa'
-import { TbRefresh } from 'react-icons/tb'
-
+// import { FaTruck } from 'react-icons/fa'
+import {  TbTicket } from 'react-icons/tb'
+import { RiServiceFill } from 'react-icons/ri'
+import Aos from "aos";
 const About = () => {
     return (
         <div className="text-center">
@@ -13,26 +14,30 @@ const About = () => {
                 
             </h1>
            </div>
+           <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
            <div className="flex justify-center pb-2 pt-5 ">
         
-            <img className="w-[500px]" src='/src/assets/photo-1524368535928-5b5e00ddc76b.jpg' alt="" />
-           </div> 
+        <img className="w-[500px]" src='/src/assets/photo-1524368535928-5b5e00ddc76b.jpg' alt="" />
+       </div> 
+           </div>
            <br />
                 <hr />
                 <br />
                 <div className="pb-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="single-shipping">
-                            <TbRefresh className='text-center font-bold text-5xl mx-auto' />
-                            <h3>30 DAYS RETURN</h3>
+                            <TbTicket className='text-center font-bold text-5xl mx-auto' />
+                            <h3>Ticket Sales</h3>
                         </div>
                         <div className="single-shipping">
-                            <FaTruck className='text-center font-bold text-5xl mx-auto' />
-                            <h3>FREE SHIPPING</h3>
+                            <RiServiceFill className='text-center font-bold text-5xl mx-auto' />
+                            <h3>Food Services</h3>
                         </div>
                         <div className="single-shipping">
                             <AiTwotoneLock className='text-center font-bold text-5xl mx-auto' />
-                            <h3>SECURE PAYMENT</h3>
+                            <h3>Security Services</h3>
                         </div>
                     </div>
                 </div>
@@ -42,5 +47,5 @@ const About = () => {
         </div>
     );
 };
-
+Aos.init()
 export default About;
