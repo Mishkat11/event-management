@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link,    } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin";
 import toast from "react-hot-toast";
@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 
 const Register = () => {
     const { createUser,handleUpdateProfile } = useContext(AuthContext)
+    // const navigate = useNavigate()
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -32,18 +33,20 @@ const Register = () => {
         }
 
         createUser(email, password)
-            .then(res => {
+            .then(() => {
                 handleUpdateProfile(name,img)
                 .then(()=>{
                     toast.success('User created successfully')
-                console.log(res.user);
+                    window.location.reload()
                 })
                 .catch(error=>{
                     toast.error(error.message)
                 })
+            //    navigate('/')
+              
             })
             .catch(error => toast.error(error.message))
-
+// e.reset()
     }
     return (
         <div className="hero min-h-screen bg-base-200">

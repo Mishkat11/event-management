@@ -19,7 +19,7 @@ const About = () => {
      data-aos-duration="2000">
            <div className="flex justify-center pb-2 pt-5 ">
         
-        <img className="w-[500px]" src='/src/assets/photo-1524368535928-5b5e00ddc76b.jpg' alt="" />
+        <img className="w-[500px]" src='https://i.ibb.co/SxPRGhG/photo-1524368535928-5b5e00ddc76b.jpg' alt="" />
        </div> 
            </div>
            <br />

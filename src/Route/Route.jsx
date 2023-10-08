@@ -9,6 +9,7 @@ import SingleService from '../Components/SingleService';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
 import PrivateRoute from './PrivateRoute';
+import Blog from '../Pages/Blog/Blog';
 
 const MainRoute = createBrowserRouter ([
     {
@@ -41,6 +42,10 @@ const MainRoute = createBrowserRouter ([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/blog',
+                element:<PrivateRoute><Blog></Blog></PrivateRoute>
             }
         ]
     }

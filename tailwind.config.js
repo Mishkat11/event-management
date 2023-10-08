@@ -10,7 +10,8 @@ export default {
 Nunito: " 'Nunito Sans', sans-serif"
       },
       backgroundImage:{
-      'bg-banner': "url(/src/assets/rear-view-large-group-music-fans-front-stage-during-music-concert-by-night-copy-space.jpg)"
+      'bg-banner': "url(/src/assets/rear-view-large-group-music-fans-front-stage-during-music-concert-by-night-copy-space.jpg)",
+      'bg-contact': "url('src/assets/420-4208919_contact-us-contact-email-banner.png')"
       }
     },
   },
