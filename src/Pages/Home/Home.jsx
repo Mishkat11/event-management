@@ -15,14 +15,16 @@ const Home = () => {
         <div>
           
             <Banner></Banner>
-            <div className="py-10">
+            <div className="py-10 ">
                 <h1 className="text-3xl text-center font-bold">Our Services</h1>
-                <div data-aos="fade-up-left" className="grid md:grid-cols-2 gap-4 pt-8 ">
+              <div className="overflow-x-clip">
+              <div data-aos="fade-up-left" className="grid md:grid-cols-2 gap-4 pt-8 ">
 {
     servicesData.map(services=> <Services key={services.id} services={services}></Services>)
 }
                 </div>
             </div>
+              </div>
 
 <Security></Security>
 

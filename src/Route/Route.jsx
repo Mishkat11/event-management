@@ -10,6 +10,7 @@ import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
 import PrivateRoute from './PrivateRoute';
 import Blog from '../Pages/Blog/Blog';
+import Gallery from '../Pages/Gallery/Gallery';
 
 const MainRoute = createBrowserRouter ([
     {
@@ -46,6 +47,10 @@ const MainRoute = createBrowserRouter ([
             {
                 path:'/blog',
                 element:<PrivateRoute><Blog></Blog></PrivateRoute>
+            },
+            {
+                path:'/gallery',
+                element:<PrivateRoute><Gallery></Gallery></PrivateRoute>
             }
         ]
     }

@@ -3,10 +3,6 @@
   <h1>MCQ TEST</h1>
 </div>
 
-<div align="center">
-  <img height="60" src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/944e5d47-8c55-4a89-91e5-22ab5f2798fc_CI.png">
-  <h1>MCQ TEST</h1>
-</div>
 
 ###### 1. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -130,6 +126,7 @@ console.log(count);
 #### Answer: C 
 
 <i>After using the forEach method to `nums` the callback function `num` represents the each and every element of the array `nums`. There is an if statement which is checking if the `num` is truthy (not equal to 0) if so,it increments the count by 1.After all the increments `count ` hold the non-zero element.And after consoling the answer will be 3. </i>
+
 
 </p>
 </details>

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 
 const Register = () => {
-    const {createUser,handleUpdateProfile } = useContext(AuthContext)
+    const {createUser,handleUpdateProfile,user,setUser } = useContext(AuthContext)
 
     const navigate = useNavigate()
 
@@ -37,7 +37,7 @@ const Register = () => {
             .then(() => {
                 handleUpdateProfile(name,img)
                 .then(()=>{
-                   
+                   setUser({...user,displayName:name,photoURL:img})
                     toast.success('User created successfully')
                     // window.location.reload()
                 })

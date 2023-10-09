@@ -57,6 +57,7 @@ const googleLogin=()=>{
  const authInfo = {
     logout,
     user,
+    setUser,
     createUser,
     signIn,
     handleUpdateProfile,

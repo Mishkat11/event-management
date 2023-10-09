@@ -22,6 +22,10 @@ const Nav = () => {
         className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "underline btn btn-sm btn-ghost  text-blue-600 font-semibold " : ""
         }> Blog</NavLink>
+    <NavLink to="/gallery"
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "underline btn btn-sm btn-ghost  text-blue-600 font-semibold " : ""
+        }> Gallery</NavLink>
     </>}
     </div>
 

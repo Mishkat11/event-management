@@ -11,9 +11,12 @@ const Contact = () => {
                     data-aos-offset="300"
                     data-aos-easing="ease-in-sine"
                     className="relative h-full bg-black/80 flex justify-center items-center">
-                    <h1 className=" font-bold text-5xl text-white ">
-                        Contact Us
+                     <div>
+                   <h1 className=" font-bold text-5xl text-white ">
+                       Contact Us
                     </h1>
+                    <p className="pt-3 text-center font-semibold text-white">Home / <span className="text-blue-600">Contact</span></p>
+                   </div>
                 </div>
                 <div>
 

@@ -9,7 +9,7 @@ const Services = ({ services }) => {
     const { name, short_description, price, image_url, id } = services
     return (
         <div>
-            <div className="relative flex w-full h-[270px]  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div className="border border-black relative flex w-full h-[270px]  flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div  className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
                     <img  data-aos="zoom-in"
                         src={image_url}

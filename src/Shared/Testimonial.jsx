@@ -5,7 +5,7 @@ const Testimonial = () => {
      <div className="bg-blue-200">
             <h1 className="pt-5 text-3xl font-bold text-center text-blue-900"> Testimonial</h1>
             <p className="text-center font-bold text-4xl pb-5 ">What people say</p>
-        <div className="grid md:grid-cols-2 mx-auto ">
+        <div className="grid md:grid-cols-2 mx-auto overflow-x-clip ">
             <div   data-aos="fade-right"
      data-aos-offset="300"
      data-aos-easing="ease-in-sine" className="ml-10 relative flex w-full max-w-[300px]   flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">

@@ -3,7 +3,7 @@ import Aos from "aos";
 const Banner = () => {
     return (
         <div >
-            <div className=" bg-bg-banner h-[450px] bg-cover bg-no-repeat ">
+            <div className=" bg-bg-banner h-[450px] bg-cover bg-no-repeat overflow-x-clip ">
                 {/* <img className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-slate-900 bg-blend-overlay h-[500px] w-full" src="/src/assets/rear-view-large-group-music-fans-front-stage-during-music-concert-by-night-copy-space.jpg" alt="" /> */}
                
                <div data-aos="fade-right"
