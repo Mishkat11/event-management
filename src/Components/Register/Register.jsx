@@ -1,13 +1,14 @@
 import { useContext } from "react";
-import { Link,    } from "react-router-dom";
+import { Link, useNavigate,    } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin";
 import toast from "react-hot-toast";
 
 
 const Register = () => {
-    const { createUser,handleUpdateProfile } = useContext(AuthContext)
-    // const navigate = useNavigate()
+    const {createUser,handleUpdateProfile } = useContext(AuthContext)
+
+    const navigate = useNavigate()
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -36,13 +37,14 @@ const Register = () => {
             .then(() => {
                 handleUpdateProfile(name,img)
                 .then(()=>{
+                   
                     toast.success('User created successfully')
-                    window.location.reload()
+                    // window.location.reload()
                 })
                 .catch(error=>{
                     toast.error(error.message)
                 })
-            //    navigate('/')
+               navigate('/')
               
             })
             .catch(error => toast.error(error.message))
