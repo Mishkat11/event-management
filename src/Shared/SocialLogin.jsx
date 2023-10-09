@@ -1,17 +1,18 @@
 import { useContext } from "react";
 
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const SocialLogin = () => {
+    const location = useLocation()
     const navigate = useNavigate()
     const {googleLogin } = useContext(AuthContext)
     const handleLogin =(media)=>{
         media()
         .then(()=>{
+            navigate(location?.state ? location.state : '/' )
             toast.success('user created successfully')
-            navigate('/')
         })
         
         .catch(error=>{
