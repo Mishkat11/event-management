@@ -26,14 +26,14 @@ const Gallery = () => {
 <p className="text-center text-3xl  font-semibold py-5">Enjoy Some of our Concert Images <br /> that we have <span className="text-blue-600 font-extrabold"> organized</span></p>
       <div className="carousel relative h-[500px] ">
   <div id="slide1" className="carousel-item relative w-full">
-    <img src="https://i.ibb.co/Jd1dHHk/nicholas-green-n-Pz8akk-Um-DI-unsplash.jpg" className="w-full" />
+    <img src="https://i.ibb.co/9Zb77vg/photo-1501612780327-45045538702b.jpg" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
   </div> 
   <div id="slide2" className="carousel-item relative w-full">
-    <img src="https://i.ibb.co/QpBPpDg/jordon-conner-t-Ir-PWg-SYB4-unsplash.jpg" className="w-full" />
+    <img src="https://i.ibb.co/3ss0gwm/217117-a-black-and-white-shot-of-a-band-on-stage-with-row.jpg" className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" className="btn btn-circle">❮</a> 
       <a href="#slide3" className="btn btn-circle">❯</a>

@@ -42,7 +42,7 @@ const Nav = () => {
                             {navLink}
                         </ul>
                     </div>
-                    <img className="w-[120px]" src="/src/assets/6QFKAX-LogoMakr.png" alt="" />
+                    <img className="w-[120px]" src="https://i.ibb.co/hdSxmyz/6-QFKAX-Logo-Makr.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

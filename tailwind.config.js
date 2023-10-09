@@ -10,7 +10,7 @@ export default {
 Nunito: " 'Nunito Sans', sans-serif"
       },
       backgroundImage:{
-      'bg-banner': "url('https://i.ibb.co/hgzqLgm/rear-view-large-group-music-fans-front-stage-during-music-concert-by-night-copy-space.jpg')",
+      'bg-banner': "url('https://i.ibb.co/KzWZpGx/photo-1573152958734-1922c188fba3.jpg')",
       'bg-contact': "url('https://i.ibb.co/ftCb9f4/420-4208919-contact-us-contact-email-banner.jpg')",
       'bg-blg': "url('https://i.ibb.co/Smk2KCK/photo-1622070284208-69fba2b6eccb.jpg')"
       }
